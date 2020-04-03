@@ -4,7 +4,8 @@
     "data": {
       "oneOf": [
         { "$ref": "#/definitions/integerData" },
-        { "$ref": "#/definitions/stringData" }
+        { "$ref": "#/definitions/stringData" },
+        { "$ref": "#/definitions/objectData" }
       ]
     }
   },
@@ -16,6 +17,9 @@
     },
     "stringData" : {
       "type": "string"
+    },
+    "objectData" : {
+      "type" : "object"
     }
   }
 }
