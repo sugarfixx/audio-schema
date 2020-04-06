@@ -8,5 +8,13 @@
 
 class Audio
 {
+    /**
+     * @var AudioStream[]
+     */
+    public $streams;
 
+    /**
+     * @var AudioMapping[]
+     */
+    public $mappings;
 }
