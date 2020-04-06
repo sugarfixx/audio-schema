@@ -35,7 +35,8 @@ class Language
         $this->{$key} = $value;
     }
 
-    public function get($key) {
+    public function get($key)
+    {
         return $this->{$key};
     }
 
