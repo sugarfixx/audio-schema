@@ -3,7 +3,8 @@
     "description": "Handler for audio schema",
     "require": {
         "justinrainbow/json-schema": "^5.2",
-        "ext-json": "*"
+        "ext-json": "*",
+        "netresearch/jsonmapper": "^2.0"
     },
     "authors": [
         {
