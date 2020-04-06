@@ -9,23 +9,23 @@
 class Language
 {
     /**
-     * @var String
+     * @var string
      */
     public $iso_639_1;
     /**
-     * @var String
+     * @var string
      */
     public $iso_639_2;
     /**
-     * @var String
+     * @var string
      */
     public $rfc_5646;
     /**
-     * @var String
+     * @var string
      */
     public $name;
     /**
-     * @var String
+     * @var string
      */
     public $name_full;
 
