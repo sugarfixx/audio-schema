@@ -5,11 +5,19 @@
  * Date: 03/04/2020
  * Time: 11:27
  */
+
 require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/src/models.php';
 require __DIR__ . '/src/AudioData.php';
 
 $schema = (object)['$ref' => 'file://' . realpath('sample-data/schema.json')];
 $data = json_decode(file_get_contents('sample-data/data.json'));
 
-$audioData = new AudioData();
-$audioData->validate($schema, $data);
+// $audioData = new AudioData();
+// $audioData->validate($schema, $data);
+
+
+$json = json_decode(file_get_contents('sample-data/demo.json'));
+$mapper = new JsonMapper();
+$audio = $mapper->map($json, new Demo());
+var_dump($audio);

@@ -1,0 +1,15 @@
+{
+  "name":"Sheldon Cooper",
+  "address": [
+    {
+      "type" : "home",
+      "street": "2311 N. Los Robles Avenue",
+      "city": "Pasadena"
+    },
+    {
+      "type" : "away",
+      "street": "556 Loles Road",
+      "city": "Quadraphonia"
+    }
+  ]
+}

@@ -8,5 +8,22 @@
 
 class AudioMapping
 {
+    /**
+     * @var int
+     */
+    public $mapping_index;
+    /**
+     * @var string
+     */
+    public $label;
 
+    /**
+     * @var string
+     */
+    public $type;
+
+    /**
+     * @var MappedStream[]
+     */
+    public $streams;
 }
