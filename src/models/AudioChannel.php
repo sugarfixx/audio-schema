@@ -15,7 +15,7 @@ class AudioChannel
     public $index;
 
     /**
-     * @var String
+     * @var string
      */
     public $description;
 
@@ -25,12 +25,12 @@ class AudioChannel
     public $language;
 
     /**
-     * @var String
+     * @var string
      */
     public $title;
 
     /**
-     * @var String
+     * @var string
      */
     public $type;
 
