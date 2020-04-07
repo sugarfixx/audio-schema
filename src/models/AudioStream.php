@@ -6,7 +6,7 @@
  * Time: 08:26
  */
 
-
+        
 class AudioStream
 {
     /**
@@ -25,14 +25,14 @@ class AudioStream
     public $bit_rate;
 
     /**
-     * @var string;
+     * @var string
      */
     public $bit_rate_mode;
 
     /**
      * @var AudioChannel[]
      */
-    public $channels = [];
+    public $channels;
 
     /**
      * @var string

@@ -17,7 +17,7 @@ $data = json_decode(file_get_contents('sample-data/data.json'));
 // $audioData->validate($schema, $data);
 
 
-$json = json_decode(file_get_contents('sample-data/demo.json'));
+$json = json_decode(file_get_contents('sample-data/b.json'));
 $mapper = new JsonMapper();
-$audio = $mapper->map($json, new Demo());
+$audio = $mapper->map($json->audio, new Audio());
 var_dump($audio);
