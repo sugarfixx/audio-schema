@@ -6,7 +6,7 @@
  * Time: 08:26
  */
 
-        
+
 class AudioStream
 {
     /**
@@ -42,7 +42,7 @@ class AudioStream
     /**
      * @var string
      */
-    public $endianess;
+    public $endianness;
 
     /**
      * @var string
