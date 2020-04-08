@@ -13,13 +13,16 @@ require __DIR__ . '/src/AudioData.php';
 $schema = (object)['$ref' => 'file://' . realpath('sample-data/schema.json')];
 $data = json_decode(file_get_contents('sample-data/data.json'));
 
-// schemaValidation
-/*
-$audioData = new AudioData();
-$audioData->validate($schema, $data);
-*/
 
 $json = json_decode(file_get_contents('sample-data/audio-sample.json'));
-$mapper = new JsonMapper();
-$audio = $mapper->map($json->audio, new Audio());
+
+$audioData = new AudioData();
+
+// schemaValidation
+$valid = $audioData->validate($schema, $json, true);
+var_dump($valid);
+
+// map json to model
+// $json = json_decode(file_get_contents('sample-data/audio-sample.json'));
+$audio = $audioData->parse($json);
 var_dump($audio);
