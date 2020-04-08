@@ -6,20 +6,37 @@
  * Time: 11:29
  */
 
+
 class AudioData
 {
-    public function validate($schema, $data)
+    public function validate($schema, $data , $verbose = false)
     {
         $validator = new JsonSchema\Validator;
         $validator->validate($data, $schema);
 
         if ($validator->isValid()) {
-            echo "The supplied JSON validates against the schema.\n";
+            $string = "The supplied JSON validates against the schema.\n";
+            $valid = true;
         } else {
-            echo "JSON does not validate. Violations:\n";
+            $string = "JSON does not validate. Violations:\n";
             foreach ($validator->getErrors() as $error) {
-                echo sprintf("[%s] %s\n", $error['property'], $error['message']);
+                $string .= sprintf("[%s] %s\n", $error['property'], $error['message']);
             }
+            $valid = false;
         }
+
+
+        if ($verbose) {
+            return $string;
+        }
+        else {
+            return $valid;
+        }
+    }
+
+    public function parse($json)
+    {
+        $mapper = new JsonMapper();
+        return $mapper->map($json->audio, new Audio());
     }
 }
