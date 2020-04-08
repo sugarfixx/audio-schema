@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "properties": {
+    "audio": {
+      "oneOf": [
+        { "$ref": "#/definitions/objectData" }
+      ],
+      "properties": {
+        "streams" : {
+          "oneOf": [
+            { "$ref": "#/definitions/objectData" }
+          ],
+        },
+        "mappings" : {
+          "oneOf": [
+            { "$ref": "#/definitions/objectData" }
+          ],
+        }
+      }
+    }
+  },
+  "required": ["audio"],
+  "definitions": {
+    "objectData" : {
+      "type" : "object"
+    }
+  }
+}
