@@ -27,6 +27,16 @@ class VodPackageData
 
     public function createFromAudioObject()
     {
+        if ($this->audioObject) {
+            $data = $this->buildNodes($this->audioObject);
+            return json_encode($data);
+        }
+        return null;
+    }
 
+    private function buildNodes()
+    {
+        //
+        return null;
     }
 }
