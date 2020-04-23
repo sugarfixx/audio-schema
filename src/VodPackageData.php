@@ -8,5 +8,25 @@
 
 class VodPackageData
 {
+    /**
+     * @var Audio
+     */
+    private $audioObject;
+    /**
+     * @param $audioObject
+     */
+    public function setAudioObject($audioObject)
+    {
+        $this->audioObject = $audioObject;
+    }
 
+    public function getAsset($assetId)
+    {
+        return null;
+    }
+
+    public function createFromAudioObject()
+    {
+
+    }
 }
