@@ -9,7 +9,7 @@
 require __DIR__ . '/vendor/autoload.php';
 require __DIR__ . '/src/models.php';
 require __DIR__ . '/src/AudioData.php';
-
+require __DIR__ . '/src/VodPackageData.php';
 
 
 $schema = (object)['$ref' => 'file://' . realpath('sample-data/audio-schema.json')];
@@ -24,4 +24,11 @@ $audioData = new AudioData();
 
 // map json to model
 $audio = $audioData->parse($json);
-var_dump($audio);
+//var_dump($audio);
+
+$vodPackage = new VodPackageData();
+$vodPackage->setAudioObject($audio);
+
+var_dump($vodPackage->verifyObject());
+var_dump($vodPackage->createFromAudioObject());
+

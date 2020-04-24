@@ -27,26 +27,27 @@ class VodPackageData
 
     public function createFromAudioObject()
     {
-        if ($this->audioObject) {
-            $data = $this->buildNodes($this->audioObject);
-            return json_encode($data);
+        if ($this->audioObject and $this->verifyObject() ) {
+            return $this->buildNodes($this->audioObject->mappings);
         }
         return null;
     }
 
     private function buildNodes($mappings)
     {
+        $returnable = [];
         foreach ($mappings as $mappedTrack) {
-            
+            $returnable[] = $mappedTrack->label;
         }
-        return null;
+
+        return !empty($returnable) ? $returnable : null;
     }
 
-    private function verifyObject($object)
+    public function verifyObject()
     {
-        if ($object instanceof Audio) {
-            return $object;
+        if ($this->audioObject instanceof Audio) {
+            return true;
         }
-
+        return false;
     }
 }
