@@ -37,10 +37,26 @@ class VodPackageData
     {
         $returnable = [];
         foreach ($mappings as $mappedTrack) {
-            $returnable[] = $mappedTrack->label;
+            // only for to visualize sample
+            $returnable[$mappedTrack->mapping_index] = [
+                'label' =>$mappedTrack->label,
+                'language' => 'default',
+                'clips' => [
+                    'type' => $mappedTrack->type,
+                    'path' => 'file_path',
+                    'tracks' => 'tracks'
+                ]
+            ];
         }
 
-        return !empty($returnable) ? $returnable : null;
+        return !empty($returnable) ? $this->formatResponse($returnable) : null;
+    }
+
+    private function formatResponse($data)
+    {
+        return json_encode([
+            "sequences" => array_values($data)
+        ]);
     }
 
     public function verifyObject()
