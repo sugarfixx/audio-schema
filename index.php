@@ -19,8 +19,8 @@ $json = json_decode(file_get_contents('sample-data/audio-sample.json'));
 $audioData = new AudioData();
 
 // schemaValidation
-$valid = $audioData->validate($schema, $json, true);
-var_dump($valid);
+// $valid = $audioData->validate($schema, $json, true);
+// var_dump($valid);
 
 // map json to model
 $audio = $audioData->parse($json);

@@ -34,9 +34,19 @@ class VodPackageData
         return null;
     }
 
-    private function buildNodes()
+    private function buildNodes($mappings)
     {
-        //
+        foreach ($mappings as $mappedTrack) {
+            
+        }
         return null;
+    }
+
+    private function verifyObject($object)
+    {
+        if ($object instanceof Audio) {
+            return $object;
+        }
+
     }
 }
