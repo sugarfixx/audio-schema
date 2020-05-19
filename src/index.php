@@ -45,6 +45,8 @@ elseif (isset($_GET['vod-package'])) {
 
 ?>
 
+
+Actions:
 <ul>
     <li>
         <a href="?view-json">View JSON</a>
@@ -60,3 +62,20 @@ elseif (isset($_GET['vod-package'])) {
     </li>
 </ul>
 
+<br>
+<hr>
+References:
+<ul>
+    <li>
+        <a href="https://mbnepms.atlassian.net/browse/MP-942" target="_blank">Multi Audio</a>
+    </li>
+    <LI>
+        <a href="https://mbnepms.atlassian.net/browse/UP-22" target="_blank">Audio Model</a>
+    </LI>
+    <LI>
+        <a href="https://mbnepms.atlassian.net/browse/UP-212" target="_blank">Audio Model Schema</a>
+    </LI>
+    <LI>
+        <a href="https://mbnepms.atlassian.net/browse/EN-2043" target="_blank">Audio Playback api</a>
+    </LI>
+</ul>
