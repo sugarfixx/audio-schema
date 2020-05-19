@@ -7,25 +7,25 @@ namespace Composer\Autoload;
 class ComposerStaticInitc56595bf048849dff804f3c3625ad4e2
 {
     public static $prefixLengthsPsr4 = array (
-        'J' =>
+        'J' => 
         array (
             'JsonSchema\\' => 11,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'JsonSchema\\' =>
+        'JsonSchema\\' => 
         array (
-            0 => __DIR__ . '/..',
+            0 => __DIR__ . '/..' . '/justinrainbow/json-schema/src/JsonSchema',
         ),
     );
 
     public static $prefixesPsr0 = array (
-        'J' =>
+        'J' => 
         array (
-            'JsonMapper' =>
+            'JsonMapper' => 
             array (
-                0 => __DIR__ . '/..',
+                0 => __DIR__ . '/..' . '/netresearch/jsonmapper/src',
             ),
         ),
     );
